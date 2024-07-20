@@ -1,0 +1,136 @@
+/* styles.css */
+.NavBar {
+    display: flex;
+    justify-content: space-between; /* Align items at the start and end */
+    align-items: center;
+  }
+  
+  .NavBar h1 {
+    flex: 1; /* This makes the title take up remaining space */
+  }
+  
+  /* Add this to position the menu icon on the far right */
+  .NavBar img {
+    margin-left: auto;
+    transition: filter 0.3s ease;
+
+  }
+
+
+.NavBar img:hover {
+    filter: hue-rotate(180deg); /* Rotate the hue by 180 degrees (change the color) */
+
+}
+
+  
+  .SideBar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially hidden */
+    width: 300px;
+    height: 100%;
+    background-color: #f0f0f0;
+    transition: right 0.3s ease; /* Transition for smooth animation */
+    overflow: auto;
+    z-index: 1;
+  }
+  
+  .SideBar.active {
+    right: 0; /* Slide sidebar to the right */
+  }
+  
+  .note {
+    background-color: white;
+    color: black;
+    border: 1px solid #000; /* Add border for better separation */
+    padding: 10px;
+    margin-bottom: 10px; /* Add margin between notes */
+    transition: background-color 0.3s, border-color 0.3s border-width 0.3s; /* Smooth transition for background and border color changes */
+  }
+  .note:hover{
+    background-color: #f0f0f0; /* Change background color on hover */
+    border-color: #999; /* Change border color on hover */
+    border-width: 2px;
+  }
+  .note.selected{
+    background-color: white;
+    color: black;
+    border: 3px solid #000; /* Add border for better separation */
+    padding: 10px;
+    margin-bottom: 10px; /* Add margin between notes */
+    font-family: bold;
+  }
+  .buttonsContainer {
+    position: relative; /* Position the container relative to the sidebar */
+    width: 100%; /* Ensure that the container spans the full width of the sidebar */
+}
+  
+  .SideBar button {
+    width: 100%; /* Make the button width 100% of the sidebar */
+    margin-bottom: 10px; /* Add space below the button */
+    padding: 10px; /* Optional: Add padding to the button for better appearance */
+    border: 1px solid black; /* Specify border width, style, and color */
+    background-color: transparent; /* Optional: Set background color to transparent */
+    cursor: pointer; /* Optional: Add cursor pointer for better usability */
+    text-align: center; /* Optional: Align text to the left */
+    transition: background-color 0.3s, border-color 0.3s border-width 0.3s; /* Smooth transition for background and border color changes */
+    z-index: 2;
+}
+
+.SideBar button:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+    border-color: #999; /* Change border color on hover */
+    border-width: 2px;
+}
+
+  
+  
+  .editor {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .editorcontainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .editorcontainer button{
+    width: 90%;
+  }
+  
+  #textarea {
+    width: 90%;
+    height: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  #picture{
+    border: solid black 1px;
+  }
+  #input-file{
+    display: none;
+  }
+  .picbox {
+    position: relative;
+  }
+  
+  .picbox img {
+    display: block;
+  }
+  
+  .picbox label {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    border: 1px solid black; /* Add a black border to the label */
+    width: 120px;
+    padding: 5px 10px; /* Add padding to the label for better appearance */
+  }
+  
+  
+  
+  
